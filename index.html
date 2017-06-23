@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Order Page for BusMall</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>BusMall Order Form</h1>
+    <form id="orderform">
+      <fieldset>
+        <legend>Fill in data and submit!</legend>
+        <label>Select an item
+          <select name="selection">
+            <option value=""></option>
+          </select>
+        </label>
+        <label>Quantity:<input name="quantity" type="number"></label>
+        <label>Name:<input name="name" type="text"></label>
+        <label>Street:<input name="street" type="text"></label>
+        <label>City:<input name="city" type="text"></label>
+        <label>State:<input name="state" type="text"></label>
+        <label>ZIP:<input name="zip" type="text"></label>
+        <label>Phone:<input name="phone" type="tel"></label>
+        <label>Email:<input name="email" type="email"></label>
+        <button type="submit">Order Now!</button>
+      </fieldset>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>

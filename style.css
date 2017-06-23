@@ -1,0 +1,13 @@
+* {
+  font-family: Helvetica, sans-serif;
+  color: navy;
+  outline: 1px dashed orange;
+}
+
+body {
+  background-color: #bbb
+}
+
+label {
+  display: block;
+}
