@@ -3,8 +3,9 @@
 var form = document.getElementById('orderform');
 Order.all = [];
 
-function Order(selection, quantity, name, street, city, state, zip, phone, email){
+function Order(selection, src, quantity, name, street, city, state, zip, phone, email){
   this.selection = selection;
+  this.src = src;
   this.quantity = quantity;
   this.name = name;
   this.street = street;
@@ -16,11 +17,11 @@ function Order(selection, quantity, name, street, city, state, zip, phone, email
   Order.all.push(this);
 }
 
-
 function handleForm(e){
   e.preventDefault();
   // console.log(e.target.quantity.value)
   new Order(
+    event.target.selection.value,
     event.target.selection.value,
     event.target.quantity.value,
     event.target.name.value,
@@ -43,6 +44,9 @@ function handleForm(e){
 
 if(localStorage.orders) {
   Order.all = JSON.parse(localStorage.orders);
+  console.log('Data retrieved from local storage')
+} else {
+  console.log('No data in local storage');
 }
 
 form.addEventListener('submit', handleForm);
